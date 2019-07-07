@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+  <div class='topping'>
+<h1>Fill out the following form</br></br></br></h1>
+</div>
+  <body>
+    <header class="site-header" style="background-image: url('{% static "image/back.jpg" %}');background-size:cover;">
+
+    <div class="fom" >
+    <form method="POST">
+      {% csrf_token %}
+
+
+      Name</br>   {{ form.name }}</br></br>
+      Email </br>  {{ form.email }}</br></br>
+      Address</br> {{form.address }}</br></br>
+      Phone </br>  {{ form.phone }}</br></br>
+      Expertise</br> </br> {{ form.expertise }}</br></br>
+      College</br>  {{ form.college }}</br></br>
+
+
+      <button type="submit" class='button'>Register</button>
+    </form>
+
+    <div style="text-align:right;">
+      &#169;  Samir Lamsal
+    </div>
+  </div>
+  </header>
+  </body>
+</html>
